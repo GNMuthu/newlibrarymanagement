@@ -12,29 +12,25 @@ public class BookInformation {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-
     void bookEntry() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the Book Title");
-        String bookTitle = scanner.next();
-        scanner.nextLine();
+        String bookTitle = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter Author Name");
-        String authorName = scanner.next();
-        scanner.nextLine();
+        String authorName = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter Publishers Name");
-        String publisherName = scanner.next();
-        scanner.nextLine();
+        String publisherName = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter Book Id");
-        String bookId = scanner.next();
+        String bookId = scanner.nextLine();
 
         Book myBooks = new Book(bookTitle, authorName, publisherName, bookId);
         books.add(myBooks);
         System.out.println("List of Available books:");
-        for (int i = 0; i < books.size(); i++) {
-            System.out.println(books.get(i).bookTitle);
+        for (Book book : books) {
+            System.out.println(book.bookTitle);
         }
 
     }

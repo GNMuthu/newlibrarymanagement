@@ -11,29 +11,25 @@ public class UserInformation {
         return users;
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-
     void userEntry() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter User's Name");
-        String userName = scanner.next();
-        scanner.nextLine();
+        String userName = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter User's Gender");
-        String gender = scanner.next();
-        scanner.nextLine();
+        String gender = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter Department");
-        String department = scanner.next();
-        scanner.nextLine();
+        String department = scanner.nextLine();
+//        scanner.nextLine();
         System.out.println("Enter User Id");
-        String userId = scanner.next();
+        String userId = scanner.nextLine();
 
         User userEntry = new User(userName, gender, department, userId);
         users.add(userEntry);
         System.out.println("List of Available users");
-        for (int i = 0; i < users.size(); i++) {
-            System.out.println(users.get(i).userName);
+        for (User user : users) {
+            System.out.println(user.userName);
         }
     }
 
