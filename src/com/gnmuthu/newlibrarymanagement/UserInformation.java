@@ -15,13 +15,10 @@ public class UserInformation {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter User's Name");
         String userName = scanner.nextLine();
-//        scanner.nextLine();
         System.out.println("Enter User's Gender");
         String gender = scanner.nextLine();
-//        scanner.nextLine();
         System.out.println("Enter Department");
         String department = scanner.nextLine();
-//        scanner.nextLine();
         System.out.println("Enter User Id");
         String userId = scanner.nextLine();
 
@@ -32,7 +29,6 @@ public class UserInformation {
             System.out.println(user.userName);
         }
     }
-
 }
 
 class User {
@@ -44,5 +40,4 @@ class User {
         this.department = department;
         this.userId = userId;
     }
-
 }
